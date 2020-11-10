@@ -22,23 +22,23 @@ var loadMap = function (id) {
     map.addLayer(layer);
     map.setView(thimphu, 13);
 
-    map.locate({setView: true, watch:true}) /*  set property; watch: true, if you want the view to be focused on the marker  */
-        .on('locationfound', function(e){
-            var lat = e.latitude;
-            var long = e.longitude;
-            var currentLocation = {lat, long};
-            var marker = L.marker([e.latitude, e.longitude]).bindPopup(`lat: ${currentLocation.lat} | long: ${currentLocation.long}`);          
-            map.addLayer(marker);
+    // map.locate({setView: true, watch:true}) /*  set property; watch: true, if you want the view to be focused on the marker  */
+    //     .on('locationfound', function(e){
+    //         var lat = e.latitude;
+    //         var long = e.longitude;
+    //         var currentLocation = {lat, long};
+    //         var marker = L.marker([e.latitude, e.longitude]).bindPopup(`lat: ${currentLocation.lat} | long: ${currentLocation.long}`);          
+    //         map.addLayer(marker);
 
-            //emit the location to server
-            socket.emit('currentLocation', currentLocation);
+    //         //emit the location to server
+    //         socket.emit('currentLocation', currentLocation);
             
-        })
-       .on('locationerror', function(e){
-            console.log(e);
-            alert("Location access denied.");
-        });
-    };
+    //     })
+    //    .on('locationerror', function(e){
+    //         console.log(e);
+    //         alert("Location access denied.");
+    //     });
+    // };
 
 
 
