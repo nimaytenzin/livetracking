@@ -4,7 +4,7 @@
   "description": "get live geolocation update and send to front end",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "Nima Yoezer Tenzin",
   "license": "ISC",

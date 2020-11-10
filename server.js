@@ -7,7 +7,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 app.use(express.static('public'));
 
-const PORT = 3000 | process.env.PORT;
+const PORT = process.env.PORT || 3000 ;
 
 io.on('connection', socket => {
     console.log('new Websocket connection');
@@ -17,8 +17,6 @@ io.on('connection', socket => {
     })
 
 })
-
-
 
 server.listen(PORT, () => {
     console.log(`Server connected at port ${PORT}`);
