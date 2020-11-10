@@ -41,7 +41,7 @@ var loadMap = function (id) {
     // };
 
 
-
+}
 loadMap('map');
 
 
