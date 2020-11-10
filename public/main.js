@@ -7,8 +7,9 @@ const long = document.getElementById('long');
 //listen to location
 socket.on('location', currentLocation => {
     
-    lat.innerText = `Current latitude is ${currentLocation.lat}`;
-    long.innerText = `Current longitude is ${currentLocation.long}`;
+    // lat.innerText = `Current latitude is ${currentLocation.lat}`;
+    // long.innerText = `Current longitude is ${currentLocation.long}`;
+    lat.innerText = currentLocation
 
 
 })
